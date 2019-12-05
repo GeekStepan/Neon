@@ -14,5 +14,5 @@ def Armstrong(x):
             armstrongList.append(i)
     print(armstrongList)
 
-x = int(input("EBOY: "))
+x = int(input("Введите число: "))
 Armstrong(x)
