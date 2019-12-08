@@ -2,16 +2,17 @@ from random import randint as random
 
 def lab5(n):
     #генерация случайного массива длинной n
-    listA = [random(0, 1000) for i in range(n)] 
+    #listA = [random(0, 1000) for i in range(n)] 
     #проверка частного случая   (длинна списка 5)
     #listA = [3, 5, 19, 0, 63] 
     #проверка другого частного случая (длинна списка 8)
     #listA = [3, 5, 0, 19, 0, 0, 0, 63] 
     #minA - минимальное число списка, sumA - сумма элементов, minID - ID минимального элемента
-    minA = 0; sumA = 0; minID = listA[0] 
+    listA = [1,2,3,4,5,8,2]
+    minA = listA[0]; sumA = 0; minID = 0 
     print(listA)
     for i in range(1, n):
-        if listA[i-1] >= listA[i]:
+        if minA >= listA[i]:
             minA = listA[i]
             minID = i
         sumA += listA[i]
