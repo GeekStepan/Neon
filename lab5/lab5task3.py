@@ -1,18 +1,19 @@
 from random import randint as random
 
 def lab3(n):
-    listA = [random(1,100) for i in range(n)]
-    x = random(1,100)
-    minus = 100
-    aX = str("0")
-    print(listA, x, minus)
+    #listA = [10, 2, 32, 24, 8, 64, 7, 25, 23, 53]
+    listA =[100, 3, 0, 1, 32, 28, 512, 3, 87, 17, 6, 3, 97, 5]
+    x = 24
+    strA = str("0")
+    test1 = 0; test2 = 0
     for i in range(len(listA)):
-        print(listA[i])
         for k in range(len(listA)):
-            print(listA[k])
-            if abs(x - ((listA[i]+listA[k])/2)) < minus and k!=i:
-                minus = (x - (listA[i]+listA[k])/2)
-                aX = str(listA[i])+str("+")+str(listA[k])
-                print(aX)
+            if i != k and abs(x - ((listA[i]+listA[k])/2)) < n:
+                n = abs(x - ((listA[i]+listA[k])/2))
+                test1 = listA[i]; test2 = listA[k]
+                strA = str(listA[i]) + str(" + ") + str(listA[k])
+                print("\n24 - ", (listA[i]+listA[k])/2, " = ", abs(x - ((listA[i]+listA[k])/2)))
+                print(strA, "среднее арифметическое: ", ((test1+test2)/2))
 
-lab3(5)
+lab3(24)
+
